@@ -25,6 +25,18 @@ header {
     text-align: center;
 }
 
+.logo-link {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.logo {
+    max-width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 header h1 {
     color: #fff;
     font-size: 2.5rem;
@@ -78,7 +90,7 @@ main {
     min-height: 60vh;
 }
 
-/* ===== БЛОКИ ПРЕИМУЩЕСТВ ===== */
+/* ===== ПРЕИМУЩЕСТВА С ИКОНКАМИ ===== */
 .advantages {
     display: flex;
     flex-wrap: wrap;
@@ -95,12 +107,19 @@ main {
     text-align: center;
 }
 
+.advantage-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
 .advantage-item p {
     font-size: 1.1rem;
     color: #555;
 }
 
-/* ===== УСЛУГИ ===== */
+/* ===== УСЛУГИ С КАРТИНКАМИ ===== */
 .services {
     background: #fff;
     padding: 40px;
@@ -112,8 +131,45 @@ main {
 .services h2 {
     color: #d4a574;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 1.8rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.select__cake {
+    flex: 1 1 300px;
+    text-align: center;
+    background: #f9f5f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.select__cake img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.select__cake a {
+    display: inline-block;
+    background-color: #d4a574;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.select__cake a:hover {
+    background-color: #c49a6c;
 }
 
 /* ===== О КОМПАНИИ ===== */
@@ -131,7 +187,7 @@ main {
     line-height: 1.8;
 }
 
-/* ===== ОТЗЫВЫ ===== */
+/* ===== ОТЗЫВЫ С ФОТО ===== */
 .reviews {
     margin-bottom: 40px;
 }
@@ -144,12 +200,27 @@ main {
 }
 
 .review {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     background: #fff;
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-left: 4px solid #d4a574;
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.review__text {
+    flex: 1;
 }
 
 .review__text blockquote {
@@ -181,9 +252,95 @@ main {
     margin: 20px 0;
 }
 
+.contact h3 a {
+    color: #d4a574;
+    text-decoration: none;
+}
+
+.contact h3 a:hover {
+    text-decoration: underline;
+}
+
 .contact p {
     font-size: 1.2rem;
     margin: 10px 0;
+}
+
+/* ===== ФОРМА ОБРАТНОЙ СВЯЗИ ===== */
+.feedback-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feedback-form h2 {
+    color: #d4a574;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form__contact,
+.form__download,
+.form__submit {
+    margin-bottom: 25px;
+}
+
+.form__contact input,
+.form__download input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.form__contact input:focus,
+.form__download input:focus {
+    border-color: #d4a574;
+    outline: none;
+}
+
+.form__download label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form__submit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.form__submit input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.form__submit label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form__submit input[type="submit"] {
+    background-color: #d4a574;
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form__submit input[type="submit"]:hover {
+    background-color: #c49a6c;
 }
 
 /* ===== КАРТА ===== */
@@ -199,28 +356,7 @@ main {
     margin-bottom: 15px;
 }
 
-/* ===== НАЧИНКИ (filling.html) ===== */
-.filling-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.filling-item {
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border: 2px solid #d4a574;
-}
-
-.filling-item figcaption {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
+/* ===== НАЧИНКИ С ФОТО ===== */
 .filling-intro,
 .filling-outro {
     text-align: center;
@@ -231,15 +367,60 @@ main {
     border-radius: 10px;
 }
 
-/* ===== ТАБЛИЦА (delivery.html) ===== */
+.filling-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.filling-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid #d4a574;
+    text-align: center;
+    width: 200px;
+}
+
+.filling-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.filling-item figcaption {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ===== ТАБЛИЦА ДОСТАВКИ ===== */
+.delivery-text {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.delivery__price {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
 .delivery-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    margin: 0;
 }
 
 .delivery-table th,
@@ -247,6 +428,7 @@ main {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .delivery-table th {
@@ -259,17 +441,7 @@ main {
     background-color: #f5f5f5;
 }
 
-.delivery-text {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* ===== ТОРТЫ (cakes.html) ===== */
+/* ===== ТОРТЫ С ФОТО ===== */
 .cake {
     background: #fff;
     padding: 30px;
@@ -284,10 +456,21 @@ main {
     font-size: 1.8rem;
 }
 
+.cake__descript {
+    margin-bottom: 20px;
+}
+
 .cake__descript__text {
     margin-bottom: 20px;
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.cake__descript img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
 }
 
 .cake__buy__wrap {
@@ -316,6 +499,22 @@ main {
 .cake__buy__wrap li {
     margin-bottom: 8px;
     color: #555;
+}
+
+.cake__link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #d4a574;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cake__link:hover {
+    background-color: #c49a6c;
 }
 
 /* ===== ПОДВАЛ ===== */
@@ -362,9 +561,25 @@ footer {
     margin-bottom: 15px;
 }
 
-.footer__add {
-    font-size: 0.9rem;
+.footer__social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer__social img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.footer__add a {
     color: #bdc3c7;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer__add a:hover {
+    color: #d4a574;
 }
 
 .copyright {
@@ -374,35 +589,368 @@ footer {
     color: #bdc3c7;
 }
 
-/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+/* ===== СТРАНИЦА ОТВЕТА ===== */
+.answer {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.answer h2 {
+    color: #d4a574;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.answer h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    
-    header h2 {
-        font-size: 1rem;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav ul li a {
-        padding: 12px 20px;
-        border-bottom: 1px solid #34495e;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-    }
-    
-    .advantages,
-    .cake__buy__wrap {
-        flex-direction: column;
-    }
-    
+    header h1 { font-size: 1.8rem; }
+    header h2 { font-size: 1rem; }
+    nav ul { flex-direction: column; align-items: center; }
+    nav ul li a { padding: 12px 20px; border-bottom: 1px solid #34495e; }
+    .footer-content { flex-direction: column; }
+    .advantages, .cake__buy__wrap, .review { flex-direction: column; }
+    .review img { width: 80px; height: 80px; margin: 0 auto; }
+    .review__text { text-align: center; }
+    .delivery-table { font-size: 0.9rem; }
+    .delivery-table th, .delivery-table td { padding: 10px; }
+    .form__submit { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 10px; }
+    header h1 { font-size: 1.5rem; }
+    .services, .about, .contact, .map, .feedback-form { padding: 20px; }
+    .filling-item { width: 100%; }
+}
+/* ===== УМЕНЬШЕНИЕ ИЗОБРАЖЕНИЙ В УСЛУГАХ ===== */
+
+.select__cakes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.select__cake {
+    text-align: center;
+    flex: 0 1 450px;
+    max-width: 450px;
+}
+
+.select-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.select__cake a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #d4a574;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.select__cake a:hover {
+    background: #c49a6c;
+}
+/* ===== ТОЛЬКО ДЛЯ НОВЫХ ЭЛЕМЕНТОВ ===== */
+
+/* Логотип */
+.logo { width: 160px; height: auto; display: block; margin: 0 auto 10px; }
+
+/* Фото отзывов */
+.review { display: flex; align-items: flex-start; gap: 15px; }
+.review-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+
+/* Телефон-ссылка */
+.phone-link { color: #d4a574; text-decoration: none; font-size: 1.5rem; font-weight: bold; display: block; margin: 10px 0; }
+.phone-link:hover { text-decoration: underline; }
+
+/* Форма */
+.feedback-form { margin-top: 20px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; }
+.form__contact { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px; }
+.form__contact input { flex: 1; min-width: 200px; padding: 10px; border: 2px solid #d4a574; border-radius: 5px; }
+.form__download { margin-bottom: 15px; text-align: center; }
+.file-label { display: inline-block; padding: 10px 20px; background: #d4a574; color: #fff; border-radius: 5px; cursor: pointer; }
+.form__download input[type="file"] { display: none; }
+.form__submit { margin-bottom: 15px; }
+.form__submit label { margin-left: 5px; }
+.submit-btn { display: block; width: 100%; padding: 12px; background: #d4a574; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+
+/* Иконки соцсетей */
+.social-icon { width: 30px; height: 30px; margin-right: 10px; vertical-align: middle; }
+.footer__social a { display: inline-block; }
+
+/* Ссылки в подвале */
+.footer__add a { color: #d4a574; text-decoration: none; }
+.footer__add a:hover { text-decoration: underline; }
+/* ===== Имена клиентов в отзывах ===== */
+.review {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.review__author {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.review-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-name {
+    display: block;
+    font-weight: bold;
+    color: #d4a574;
+    font-size: 0.9rem;
+}
+
+.review__text {
+    flex: 1;
+}
+/* ===== СТРАНИЦА НАЧИНКИ (filling.html) ===== */
+
+.filling-intro,
+.filling-outro {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.filling-intro h2 {
+    color: #d4a574;
+    margin-bottom: 15px;
+}
+
+.filling-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.filling-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 200px;
+    border: 2px solid #d4a574;
+}
+
+.filling-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.filling-item figcaption {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.filling-outro p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #d4a574;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #c49a6c;
+}
+/* ===== СТРАНИЦА ТОРТЫ (cakes.html) ===== */
+
+.cake {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cake h2 {
+    color: #d4a574;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.cake__descript__text {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Изображения тортов */
+.cake__image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cake-img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cake__buy__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.cake__buy__wrap__filling,
+.cake__buy__wrap__price {
+    flex: 1 1 200px;
+}
+
+.cake__buy__wrap h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.cake__buy__wrap ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.cake__buy__wrap li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Ссылка на заказ торта */
+.cake__order-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #34495e;
+}
+/* ===== СТРАНИЦА ДОСТАВКА (delivery.html) ===== */
+
+.delivery-text {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.delivery-text h2 {
+    color: #d4a574;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.delivery-text p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.delivery__price {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.delivery-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.delivery-table th,
+.delivery-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.delivery-table th {
+    background-color: #d4a574;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.delivery-table tr:nth-child(even) {
+    background-color: #f9f5f0;
+}
+
+.delivery-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Адаптивность для таблицы */
+@media (max-width: 768px) {
     .delivery-table {
         font-size: 0.9rem;
     }
@@ -411,29 +959,48 @@ footer {
     .delivery-table td {
         padding: 10px;
     }
-    
-    .contact h3 {
-        font-size: 1.5rem;
-    }
+}
+/* ===== СТРАНИЦА ПОДТВЕРЖДЕНИЯ (answer.html) ===== */
+
+.answer {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 30px 0;
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
-    }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .services,
-    .about,
-    .contact,
-    .map {
-        padding: 20px;
-    }
-    
-    .review {
-        padding: 15px;
-    }
+.answer h2 {
+    color: #d4a574;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.answer h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.answer p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.answer .order-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #d4a574;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.answer .order-btn:hover {
+    background: #c49a6c;
 }
